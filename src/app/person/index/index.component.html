@@ -1,0 +1,52 @@
+<section>
+
+    <div class="d-flex justify-content-between">
+      <h4>Listado de registros</h4>
+      <a routerLink="/registroBiologico/create" class="btn btn-success">Nuevo registro</a>
+      <a  class="btn btn-info">Export</a>
+    </div>
+
+    <br>
+    
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Especie</th>
+        <th>familia</th>
+        <th>nombre comun</th>
+        <th>proyecto</th>
+        <th>base_registro</th>
+        <th>Año identificacion</th>
+        <th>departamento</th>
+        <th>municipio</th>
+        <th>localidad</th>
+        <th>latitud</th>
+        <th>longitud</th>
+        <th>autor</th>
+        <th>fecha_captura</th>
+        <th>ecoregion</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let person of persons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.especie }}</td>
+        <td>{{ person.familia }}</td>
+        <td>{{ person.nombre_comun }}</td>
+        <td>{{ person.proyecto }}</td>
+        <td>{{ person.base_registro }}</td>
+        <td>{{ person.identificacion_year }}</td>
+        <td>{{ person.departamento }}</td>
+        <td>{{ person.municipio }}</td>
+        <td>{{ person.localidad }}</td>
+        <td>{{ person.latitud }}</td>
+        <td>{{ person.longitud }}</td>
+        <td>{{ person.autor }}</td>
+        <td>{{ person.fecha_captura }}</td>
+        <td>{{ person.ecoregion }}</td>
+        <td>
+          <a href="#" [routerLink]="['/registroBiologico/', 'edit', person.id  ]" class="btn btn-primary">Edit</a>
+          <button type="button" (click)="deletePerson(person.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </table>
+ </section>

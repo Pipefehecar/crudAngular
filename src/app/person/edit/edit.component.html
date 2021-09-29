@@ -1,0 +1,97 @@
+<div class="container">
+  
+    <div class="d-flex justify-content-between">
+      <h4>Editar Especie</h4>
+      <a href="#" routerLink="/registroBiologico/index" class="btn btn-primary">atr&aacute;s</a>
+    </div>
+
+    <hr>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div class="form-row">
+          <div class="form-group col-md-3">
+                <label for="especie">Especie:</label>
+                <input [(ngModel)]="person.familia" formControlName="especie" id="especie" type="text" class="form-control" required>
+          </div>
+  
+          <div class="form-group col-md-3">
+                <label for="familia">Familia:</label>
+                <input [(ngModel)]="person.nombre_comun" formControlName="familia"id="familia" type="text" class="form-control">
+          </div>
+  
+          <div class="form-group col-md-3">
+            <label for="nombre_comun">Nombre comun:</label>
+            <input [(ngModel)]="person.proyecto" formControlName="nombre_comun" id="nombre_comun" type="text" class="form-control" required>
+          </div>
+  
+          <div class="form-group col-md-3">
+                <label for="proyecto">Proyecto:</label>
+                <input [(ngModel)]="person.base_registro" formControlName="proyecto"id="proyecto" type="text" class="form-control">
+          </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-3">
+              <label for="base_registro">Base del registro:</label>
+              <input [(ngModel)]="person.identificacion_year" input formControlName="base_registro" id="base_registro" type="text" class="form-control" required>
+              <!-- <select class="custom-select" formControlName="base_registro" id="base_registro" >
+                <option value="0">Observacion Humana</option>
+                <option value="1">Especimen</option>
+              </select> -->
+        </div>
+  
+        <div class="form-group col-md-2">
+              <label for="identificacion_year">Año de identificacion:</label>
+              <input [(ngModel)]="person.departamento" formControlName="identificacion_year"id="identificacion_year" type="text" class="form-control">
+        </div>
+  
+        <div class="form-group col-md-3">
+          <label for="municipio"> Municipio:</label>
+          <input [(ngModel)]="person.municipio" formControlName="municipio" id="municipio" type="text" class="form-control">
+        </div>
+  
+        <div class="form-group col-md-3">
+              <label for="localidad">Localidad:</label>
+              <input [(ngModel)]="person.localidad" formControlName="localidad"id="localidad" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+            <label for="latitud">Latitud:</label>
+            <input [(ngModel)]="person.latitud" formControlName="latitud" id="latitud" type="text" class="form-control">
+      </div>
+  
+      <div class="form-group col-md-3">
+            <label for="longitud">Longitud:</label>
+            <input [(ngModel)]="person.longitud" formControlName="longitud"id="longitud" type="text" class="form-control">
+      </div>
+  
+      <div class="form-group col-md-3">
+        <label for="autor"> Autor:</label>
+        <input [(ngModel)]="person.autor" formControlName="autor" id="autor" type="text" class="form-control">
+      </div>
+  
+      <div class="form-group col-md-3">
+            <label for="fecha_captura">Fecha Captura:</label>
+            <input [(ngModel)]="person.fecha_captura" formControlName="fecha_captura"id="fecha_captura" type="text" class="form-control">
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+          <label for="ecoregion">Ecoregion:</label>
+          <input [(ngModel)]="person.ecoregion" formControlName="ecoregion" id="ecoregion" type="text" class="form-control">
+    </div>
+  
+   
+  
+    <div class="form-group col-md-3">
+    </div>
+  
+    <div class="form-group col-md-3 mt-4">
+      <button class="btn btn-primary" type="submit" >Actualizar registro</button>
+    </div>
+  </div>
+    </form>
+</div>

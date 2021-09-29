@@ -1,0 +1,102 @@
+<div>
+
+  <div class="d-flex justify-content-between">
+    <h4>Registrar Nueva Especie</h4>
+    <a href="#" routerLink="/person/index" class="btn btn-primary">atr&aacute;s</a>
+  </div>
+
+  <hr/>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+              <label for="especie">Especie:</label>
+              <input formControlName="especie" id="especie" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-3">
+              <label for="familia">Familia:</label>
+              <input formControlName="familia"id="familia" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="nombre_comun">Nombre comun:</label>
+          <input formControlName="nombre_comun" id="nombre_comun" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-3">
+              <label for="proyecto">Proyecto:</label>
+              <input formControlName="proyecto"id="proyecto" type="text" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+            <label for="base_registro">Base del registro:</label>
+            <!-- <input formControlName="base_registro" id="base_registro" type="text" class="form-control"> -->
+            <select class="custom-select" formControlName="base_registro" id="base_registro" >
+              <option value="0">Observacion Humana</option>
+              <option value="1">Especimen</option>
+              
+            </select>
+      </div>
+
+      <div class="form-group col-md-2">
+            <label for="identificacion_year">Año de identificacion:</label>
+            <input formControlName="identificacion_year"id="identificacion_year" type="text" class="form-control">
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="municipio"> Municipio:</label>
+        <input formControlName="municipio" id="municipio" type="text" class="form-control">
+      </div>
+
+      <div class="form-group col-md-3">
+            <label for="localidad">Localidad:</label>
+            <input formControlName="localidad"id="localidad" type="text" class="form-control">
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+          <label for="latitud">Latitud:</label>
+          <input formControlName="latitud" id="latitud" type="text" class="form-control">
+    </div>
+
+    <div class="form-group col-md-3">
+          <label for="longitud">Longitud:</label>
+          <input formControlName="longitud"id="longitud" type="text" class="form-control">
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="autor"> Autor:</label>
+      <input formControlName="autor" id="autor" type="text" class="form-control">
+    </div>
+
+    <div class="form-group col-md-3">
+          <label for="fecha_captura">Fecha Captura:</label>
+          <input formControlName="fecha_captura"id="fecha_captura" type="text" class="form-control">
+    </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-3">
+        <label for="ecoregion">Ecoregion:</label>
+        <input formControlName="ecoregion" id="ecoregion" type="text" class="form-control">
+  </div>
+
+  <div class="form-group col-md-3">
+        <label for="identificacion_year">Año de identificacion:</label>
+        <input formControlName="identificacion_year"id="identificacion_year" type="text" class="form-control">
+  </div>
+
+  <div class="form-group col-md-3">
+  </div>
+
+  <div class="form-group col-md-3 mt-4">
+    <button class="btn btn-primary" type="submit" >Guardar</button>
+  </div>
+</div>
+
+        
+    </form>
+</div>
+
